@@ -112,14 +112,14 @@
          }
       </style>
 	  
-      <script src="https://YOUR_DOMAIN_URL.lightning.force.com/lightning/lightning.out.js"></script>
+      <script src="https://covid360india--dev1.lightning.force.com/lightning/lightning.out.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script>
          var token;
-		 var clientID='Put Your Connected App Client Id';
-		 var clientSecret = 'Put Your Connected App Client Secret';
+		 var clientID='3MVG9pcaEGrGRoTLxT_2YHq3bkWV5kJw9IR5nZZkQrFkGbs3AvgHs_6W5Grvcfc1cc_Y4KLPh.w.ILqjFccCn';
+		 var clientSecret = 'CAF6E6798C698E2E7F7B69896821F0118EB2B05054E9474538F4BD4062FA05A9';
          
-         var OAuthURL='https://login.salesforce.com/services/oauth2/authorize?client_id='+clientID+'&client_secret='+clientSecret+'&response_type=token&redirect_uri=https://sf-ai-dashboards-app.herokuapp.com/Dashboard.html'
+         var OAuthURL='https://login.salesforce.com/services/oauth2/authorize?client_id='+clientID+'&client_secret='+clientSecret+'&response_type=token&redirect_uri=https://sfcovid19dashboard.herokuapp.com'
          				  
          $(document).ready(function(){
          
@@ -145,8 +145,8 @@
          function initializeApp(){
 			document.getElementById("spinner").style.display = "block";
          
-			 var url='Put_Your_Org_Custom_Domain_URL';
-			 var appName='c:EADashboardApp';
+			 var url='https://covid360india--dev1.my.salesforce.com';
+			 var appName='c:DemoDashapp';
 			 $Lightning.use(appName, 
 						function() {
 							document.getElementById("spinner").style.display = "none";
@@ -157,7 +157,7 @@
          
          function createComponent(){
          	$Lightning.createComponent(
-         		"c:AnalyticsDashboardCMP", 
+         		"c:Demo", 
          		{
          			accessToken: token
          		}, 
