@@ -1,1 +1,1 @@
-<?php header( 'Location: /Dashboard.html'); ?>
+<?php include_once("Dashboard.html"); ?>
